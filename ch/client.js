@@ -303,9 +303,9 @@ function join(channel) {
 	var wasConnected = false;
 
 	if(localStorageGet('customChannel') != null) {
-		var customWsPath=prompt('请输入WebSocket地址（wss://chat.thz.cool/chat-ws）:', localStorageGet('customWsPath'));
+		var customWsPath=prompt('请输入WebSocket地址（wss://hack.chat/chat-ws）:', localStorageGet('customWsPath'));
 	}else{
-		var customWsPath=prompt('请输入WebSocket地址（wss://chat.thz.cool/chat-ws）:');
+		var customWsPath=prompt('请输入WebSocket地址（wss://hack.chat/chat-ws）:');
 	}
 	if(customWsPath != '' && customWsPath!='null' && customWsPath!=null) {
 		localStorageSet('customWsPath',customWsPath);
@@ -354,7 +354,7 @@ function join(channel) {
 
 	ws.onclose = function () {
 		if (wasConnected) {
-			pushMessage({ nick: '!', text: "您已经断开了与服务器的连接，原因包括且不限于服务器炸了、网络问题和智障初墨脑子抽风。请刷新页面。" });
+			pushMessage({ nick: '!', text: "您已经断开了与服务器的连接，原因包括且不限于服务器炸了、网络问题和脑子抽风。请刷新页面。" });
 		}
 
 		window.setTimeout(function () {
@@ -437,7 +437,7 @@ var COMMANDS = {
 			userAdd(nick);
 		});
 		
-		pushMessage({ nick: '*', text: "欢迎使用XClient！这是一个基于XChat客户端的[开源](https://github.com/zzChumo/XClient)Hack.Chat系列聊天室客户端。" })
+		pushMessage({ nick: '*', text: "欢迎由QiuLingYan修改的使用XClient！" })
 		pushMessage({ nick: '*', text: "在线的用户: " + nicks.join(", ") })
 		
 	},
