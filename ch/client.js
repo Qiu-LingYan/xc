@@ -110,6 +110,13 @@ var verifyNickname = function (nick) {
 	//return true
 }
 
+var date=new Date();
+var expiresDays=10;
+var count=1500+parseInt(date.getTime()/1000)-parseInt(date.getTime()/1000000)*1000;
+visits = count + Math.round(Math.random());
+zong = 1716920;
+zong += count + Math.round(Math.random());
+
 var homeText = "# XClient\n##### \n-----\n"+
 "欢迎来到线圈聊天工具——XClient\n这是一个极简、小型的网页在线聊天工具，专为Hack.Chat适配，基于XChat的客户端构建。\n"+
 "您可以访问这个公共聊天室：  ?meta"+
@@ -118,7 +125,7 @@ var homeText = "# XClient\n##### \n-----\n"+
 "XClient基于XChat，开源网址：https://gitee.com/liguiyu102210/xchat  \n"+
 "XChat改编自hackchat开源项目，开源网址：https://github.com/hack-chat/  \n"+
 "**如需商用该项目，请注明上述两个项目个项目的开源网址、开发者（Gitee@liguiyu102210和bilibili@智障初墨）和该项目的原名。** \n-----\n"+
-"©Copyright 2022 XQ Team,GS Team";
+document.write("今天访问人数：" + visits + "&nbsp;&nbsp;&nbsp;总访问人数：" + zong);
 
 function $$(query) {
 	return document.querySelector(query);
