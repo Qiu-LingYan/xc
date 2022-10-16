@@ -112,8 +112,8 @@ var verifyNickname = function (nick) {
 
 var homeText = "# XClient\n##### \n-----\n"+
 "欢迎来到线圈聊天工具——XClient\n这是一个极简、小型的网页在线聊天工具，专为Hack.Chat适配，基于XChat的客户端构建。\n"+
-"您可以访问这个随机生成的聊天室（大概率只有您自己）：  ?" +Math.random().toString(36).substr(2, 8)+
-"\n-----\n[您可以点击这里访问我们的主页](https://www.zzchat.cf)\n"+
+"您可以访问这个随机生成的聊天室（大概率只有您自己）：  ?meta"+
+"\n-----\n[您可以点击这里访问zzChumo的主页](https://www.zzchat.cf)\n"+
 "您可以通过修改ws/wss地址来指定需要连接的Hack.Chat系聊天室。\n"+
 "XClient基于XChat，开源网址：https://gitee.com/liguiyu102210/xchat  \n"+
 "XChat改编自hackchat开源项目，开源网址：https://github.com/hack-chat/  \n"+
@@ -304,9 +304,9 @@ function join(channel) {
 	var wasConnected = false;
 
 	if(localStorageGet('customChannel') != null) {
-		var customWsPath=prompt('请输入自定义WebSocket地址（ws://或wss://开头）:', localStorageGet('customWsPath'));
+		var customWsPath=prompt('请输入WebSocket地址（wss://chat.thz.cool/chat-ws）:', localStorageGet('customWsPath'));
 	}else{
-		var customWsPath=prompt('请输入自定义WebSocket地址（ws://或wss://开头）:');
+		var customWsPath=prompt('请输入WebSocket地址（wss://chat.thz.cool/chat-ws）:');
 	}
 	if(customWsPath != '' && customWsPath!='null' && customWsPath!=null) {
 		localStorageSet('customWsPath',customWsPath);
