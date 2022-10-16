@@ -112,7 +112,7 @@ var verifyNickname = function (nick) {
 
 var homeText = "# XClient\n##### \n-----\n"+
 "欢迎来到线圈聊天工具——XClient\n这是一个极简、小型的网页在线聊天工具，专为Hack.Chat适配，基于XChat的客户端构建。\n"+
-"您可以访问这个随机生成的聊天室（大概率只有您自己）：  ?meta"+
+"您可以访问这个公共聊天室：  ?meta"+
 "\n-----\n[您可以点击这里访问zzChumo的主页](https://www.zzchat.cf)\n"+
 "您可以通过修改ws/wss地址来指定需要连接的Hack.Chat系聊天室。\n"+
 "XClient基于XChat，开源网址：https://gitee.com/liguiyu102210/xchat  \n"+
